@@ -1,2 +1,2 @@
-require 'ub'
+require 'ud'
 run Sinatra::Application
