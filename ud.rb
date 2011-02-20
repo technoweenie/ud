@@ -17,7 +17,7 @@ end
 
 REPLACEMENT = '\1&#$@!\2'.freeze
 REPLACEMENT_CHARS = %w(& # $ @ !)
-WORDS = %w(tit fuck poop cunt shit motherfu dick)
+WORDS = %w(tit fuck poop cunt shit motherfu dick sex dick pussy anal ass cum jizz hand\ job rim\ job blow\ job jerk\ off feces faeces)
 def clean(txt)
   WORDS.each do |w|
     txt.gsub!(%r{(^|\s)#{w}[^\s]*(\s|$)}, replacement)
