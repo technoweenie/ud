@@ -8,7 +8,7 @@ class UrbanAPI::Definition
     if node
       html = node.inner_html
       html.gsub!(/\n|\r/, '')
-      html.gsub!(/<br>/, "\n")
+      html.gsub!(/<br>/i, "\n")
       Nokogiri::HTML.fragment(html).inner_text
     end
   end
