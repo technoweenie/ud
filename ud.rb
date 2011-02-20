@@ -6,7 +6,10 @@ Bundler.require
 class UrbanAPI::Definition
   def self.extract_from(node)
     if node
-      node.inner_text
+      html = node.inner_html
+      html.gsub!(/\n|\r/, '')
+      html.gsub!(/<br>/, "\n")
+      Nokogiri::HTML.fragment(html).inner_text
     end
   end
 end
